@@ -6,91 +6,138 @@
     <title>Vidyasetu Academy | Jigar Kumawat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .primary-blue { background-color: #1e3a8a; }
-        .card-hover:hover { transform: translateY(-10px); transition: 0.3s ease; }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .hero-mesh {
+            background-color: #1e3a8a;
+            background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+        }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-15px); shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; 
+            background-color: #25d366; color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100;
+        }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-slate-50 text-slate-900">
 
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="image_b2976ddf.png" alt="Vidyasetu Logo" class="h-14">
-                <span class="text-xl font-bold text-blue-900 uppercase hidden md:block">Vidyasetu Academy</span>
+    <a href="https://wa.me/917028807507" class="whatsapp-float p-4 flex items-center justify-center hover:scale-110 transition shadow-2xl" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="glass shadow-sm sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 group cursor-pointer">
+                <img src="image_b2976ddf.png" alt="Vidyasetu Logo" class="h-14 group-hover:scale-110 transition duration-300">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold text-blue-900 leading-none">VIDYASETU</span>
+                    <span class="text-xs font-semibold text-orange-500 tracking-[0.2em] uppercase">Academy</span>
+                </div>
             </div>
-            <div class="flex space-x-4 font-semibold text-gray-700 text-sm md:text-base">
-                <a href="#about" class="hover:text-orange-500">Founder</a>
-                <a href="#faculty" class="hover:text-orange-500">Faculty</a>
-                <a href="https://wa.me/917028807507" class="bg-green-500 text-white px-3 py-2 rounded-lg"><i class="fab fa-whatsapp"></i> Chat</a>
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-700 transition">Founder</a>
+                <a href="#faculty" class="hover:text-blue-700 transition">Faculty</a>
+                <a href="https://wa.me/917028807507" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition shadow-lg shadow-blue-200">Enroll Now</a>
             </div>
         </div>
     </nav>
 
-    <header class="bg-blue-900 text-white py-16 px-6 text-center">
-        <div class="container mx-auto">
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase">Vidyasetu Learning Academy</h1>
-            <p class="text-lg md:text-xl mb-6 text-orange-300 italic">"Bridging the gap between Basic Understanding & Academic Success"</p>
-            <div class="bg-white/10 p-4 rounded-lg inline-block border border-white/20">
-                <p class="font-bold text-lg">Class 3rd to 12th (Science)</p>
-                <p class="text-sm opacity-80">CBSE | STATE BOARD | ICSE</p>
+    <header class="hero-mesh text-white py-28 px-6 text-center relative overflow-hidden">
+        <div class="container mx-auto relative z-10" data-aos="fade-up">
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight">Vidyasetu Learning Academy</h1>
+            <p class="text-xl md:text-2xl mb-10 text-orange-300 font-light max-w-3xl mx-auto italic">"Bridging the gap between Basic Understanding & Academic Success"</p>
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl inline-block border border-white/20 shadow-2xl">
+                <p class="font-bold text-xl md:text-2xl">Class 3rd to 12th (Science)</p>
+                <p class="text-sm md:text-lg opacity-80 mt-1 uppercase tracking-widest">CBSE | STATE BOARD | ICSE</p>
             </div>
         </div>
+        <div class="absolute top-0 -left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 -right-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
     </header>
 
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <div class="md:w-1/3 text-center">
-                    <img src="1000078246.jpg" alt="Jigar Kumawat" class="w-64 h-64 object-cover rounded-full shadow-2xl border-4 border-blue-900 mx-auto">
-                    <h3 class="mt-4 text-2xl font-bold text-blue-900">Jigar Kumawat</h3>
-                    <p class="text-orange-600 font-bold uppercase tracking-wider">Senior Science & Maths Teacher</p>
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/3 text-center" data-aos="zoom-in">
+                    <div class="relative inline-block">
+                        <img src="1000078246.jpg" alt="Jigar Kumawat" class="w-72 h-72 object-cover rounded-3xl shadow-2xl border-2 border-slate-100 mx-auto relative z-10">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-4 border-orange-500 rounded-3xl -z-0"></div>
+                    </div>
+                    <h3 class="mt-8 text-3xl font-bold text-blue-900">Jigar Kumawat</h3>
+                    <p class="text-orange-600 font-bold uppercase tracking-widest mt-1">Senior Science & Maths Teacher</p>
                 </div>
-                <div class="md:w-2/3">
-                    <h2 class="text-3xl font-bold mb-6 border-l-8 border-orange-500 pl-4">Founder's Message</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-4">
-                        Master of Science (Physics) from Bhavan's College, Mumbai. With over <strong>3+ years of teaching experience</strong>, I focus on building a solid conceptual base for every student.
+                <div class="md:w-2/3" data-aos="fade-left">
+                    <h2 class="text-4xl font-bold mb-8 text-slate-800">Founder's Message</h2>
+                    <p class="text-slate-600 text-xl leading-relaxed mb-8">
+                        Master of Science (Physics) from Bhavan's College, Mumbai. With over <span class="text-blue-700 font-bold">3+ years of expert teaching experience</span>, I specialize in simplifying complex concepts to build a rock-solid foundation for every student.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700 font-medium">
-                        <p><i class="fas fa-check text-green-500 mr-2"></i> M.Sc. Physics (CGPA 8.3)</p>
-                        <p><i class="fas fa-check text-green-500 mr-2"></i> Board Exam Expert</p>
-                        <p><i class="fas fa-check text-green-500 mr-2"></i> Numerical Solving Expert</p>
-                        <p><i class="fas fa-check text-green-500 mr-2"></i> Personal Mentoring</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-xl">
+                            <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                            <span class="font-semibold italic">M.Sc. Physics (CGPA 8.3)</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-xl">
+                            <i class="fas fa-bullseye text-2xl text-orange-500"></i>
+                            <span class="font-semibold italic">Board Exam Expert</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-xl">
+                            <i class="fas fa-microscope text-2xl text-blue-600"></i>
+                            <span class="font-semibold italic">Numerical Solving Specialist</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-xl">
+                            <i class="fas fa-user-check text-2xl text-orange-500"></i>
+                            <span class="font-semibold italic">Personalized Mentorship</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faculty" class="py-16 bg-gray-100">
+    <section id="faculty" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12 text-blue-900">Our Expert Faculty</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <h2 class="text-4xl font-bold mb-4 text-blue-900" data-aos="fade-up">Our Expert Faculty</h2>
+            <p class="text-slate-500 mb-16 max-w-2xl mx-auto italic" data-aos="fade-up">Highly qualified educators dedicated to student growth.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                    <img src="IMG-20260330-WA0002.jpg" alt="Ram Mishra" class="w-full h-80 object-cover">
-                    <div class="p-5">
-                        <h4 class="text-xl font-bold">Ram Mishra</h4>
-                        <p class="text-orange-600 font-semibold mb-2">All Subjects (7nd to 10th) (11th &12th Chemistry Biology) </p>
-                        <p class="text-sm text-gray-500 italic">1+ Years Experience | CBSE & State Board Specialist</p>
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-80 overflow-hidden">
+                        <img src="IMG-20260330-WA0002.jpg" alt="Ram Mishra" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-slate-800">Ram Mishra</h4>
+                        <p class="text-orange-500 font-bold mb-4">7th-10th (All) | 11th-12th (Chem & Bio)</p>
+                        <p class="text-sm text-slate-500 leading-relaxed italic">1+ Years Experience. Specialist in CBSE & State Board curricula with a focus on core science.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                    <img src="IMG-20251115-WA0029.jpg" alt="Hitisha Sardar" class="w-full h-80 object-cover">
-                    <div class="p-5">
-                        <h4 class="text-xl font-bold">Hitsha Sardar</h4>
-                        <p class="text-blue-600 font-semibold mb-2">All subjects (3th to 7th)</p>
-                        <p class="text-sm text-gray-500 italic">Expert in doubt solving and deep concept explanation.</p>
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl card-hover border-t-4 border-blue-600" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-80 overflow-hidden">
+                        <img src="IMG-20251115-WA0029.jpg" alt="Hitisha Sardar" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-slate-800">Hitsha Sardar</h4>
+                        <p class="text-blue-600 font-bold mb-4">Class 3rd to 7th (All Subjects)</p>
+                        <p class="text-sm text-slate-500 leading-relaxed italic">Expert in building strong primary foundations and solving student doubts with patience.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                    <img src="1000078246.jpg" alt="Jigar Kumawat" class="w-full h-80 object-cover">
-                    <div class="p-5">
-                        <h4 class="text-xl font-bold">Jigar Kumawat</h4>
-                        <p class="text-green-600 font-semibold mb-2">Physics & Maths (7th to 12th State board/CBSE board) (mathematics specialist science & commerce)</p>
-                        <p class="text-sm text-gray-500 italic">Master of Science (Physics) | MH-CET/JEE Prep</p>
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl card-hover border-t-4 border-green-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-80 overflow-hidden">
+                        <img src="1000078246.jpg" alt="Jigar Kumawat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold text-slate-800">Jigar Kumawat</h4>
+                        <p class="text-green-600 font-bold mb-4">Physics & Maths (7th-12th)</p>
+                        <p class="text-sm text-slate-500 leading-relaxed italic">M.Sc Physics | MH-CET/JEE Prep Specialist for Science & Commerce Maths.</p>
                     </div>
                 </div>
 
@@ -98,16 +145,28 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-10 px-6 text-center">
-        <h3 class="text-xl font-bold text-orange-400 mb-2">Vidyasetu Academy</h3>
-        <p class="opacity-70 mb-4">Gala Nagar, Nalasopara East, Mumbai | +91 7028807507</p>
-        <div class="flex justify-center space-x-6 text-2xl mb-6">
-            <a href="https://wa.me/917028807507 & 919137122382" class="text-green-400 hover:scale-110"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto: jracedemy001@gmail.com" class="text-red-400 hover:scale-110"><i class="far fa-envelope"></i></a>
+    <footer class="bg-slate-950 text-white py-16 px-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h3 class="text-3xl font-bold text-orange-400 mb-4">Vidyasetu Academy</h3>
+                <p class="opacity-80 text-lg mb-2"><i class="fas fa-map-marker-alt mr-2 text-orange-500"></i> Gala Nagar, Nalasopara East, Mumbai</p>
+                <p class="opacity-80 text-lg"><i class="fas fa-phone-alt mr-2 text-orange-500"></i> +91 7028807507</p>
+            </div>
+            <div class="text-center md:text-right">
+                <h4 class="text-xl font-semibold mb-6">Quick Connect</h4>
+                <div class="flex justify-center md:justify-end space-x-8 text-4xl">
+                    <a href="https://wa.me/917028807507" class="text-green-500 hover:scale-125 transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:jracedemy001@gmail.com" class="text-red-500 hover:scale-125 transition duration-300"><i class="far fa-envelope"></i></a>
+                </div>
+                <p class="text-xs opacity-40 mt-10 uppercase tracking-widest">&copy; 2026 Vidyasetu Academy | Empowering Minds</p>
+            </div>
         </div>
-        <p class="text-xs opacity-40 uppercase tracking-widest">&copy; 2026 Vidyasetu Academy</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 </body>
-            </html>
-            
+    </html>
+    
